@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Usedtron.github.io/weather-app/static/css/main.982f5005.css",
+    "main.js": "/Usedtron.github.io/weather-app/static/js/main.6a9e272d.js",
+    "static/media/diego-ph-tIL1v1jSoaY-unsplash.jpg": "/Usedtron.github.io/weather-app/static/media/diego-ph-tIL1v1jSoaY-unsplash.20e79530af285624f4c5.jpg",
+    "index.html": "/Usedtron.github.io/weather-app/index.html",
+    "main.982f5005.css.map": "/Usedtron.github.io/weather-app/static/css/main.982f5005.css.map",
+    "main.6a9e272d.js.map": "/Usedtron.github.io/weather-app/static/js/main.6a9e272d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.982f5005.css",
+    "static/js/main.6a9e272d.js"
+  ]
+}
