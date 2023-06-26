@@ -8,9 +8,7 @@ function App() {
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=895284fb2d2c50a520ea537456963d9c`;
 
-  
-
-  function searchLocation(event) {
+  const searchLocation = (event) => {
     if (event.key === "Enter") {
       axios.get(url).then((response) => {
         setData(response.data);
@@ -20,13 +18,10 @@ function App() {
     }
   };
 
-  const celsius = fahrenheitToCelcius(data.main.feels_like.toFixed())
-
-
   return (
     <div className="App">
       <div className="search">
-        <h1>Meteo</h1>
+        <h1> Meteo</h1>
         <input
           value={location}
           onChange={(event) => setLocation(event.target.value)}
@@ -41,7 +36,9 @@ function App() {
             <p>{data.name}</p>
           </div>
           <div className="temp">
-            {data.main ? <h1> {celsius}°C</h1> : null}
+            {data.main ? (
+              <h1>{fahrenheitToCelcius(data.main.temp.toFixed())}°C</h1>
+            ) : null}
           </div>
           <div className="description">
             {data.weather ? <p>{data.weather[0].main}</p> : null}
@@ -53,7 +50,7 @@ function App() {
             <div className="feels">
               {data.main ? (
                 <p className="bold">
-                  {celsius}°C
+                  {fahrenheitToCelcius(data.main.temp.toFixed())}°C
                 </p>
               ) : null}
               <p>Feels Like</p>
@@ -64,7 +61,9 @@ function App() {
             </div>
             <div className="wind">
               {data.wind ? (
-                <p className="bold">{milesToKilometers(data.wind.speed.toFixed())} Km/h</p>
+                <p className="bold">
+                  {milesToKilometers(data.wind.speed.toFixed())} km/h
+                </p>
               ) : null}
               <p>Wind Speed</p>
             </div>
