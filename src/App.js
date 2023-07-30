@@ -5,13 +5,14 @@ import { fahrenheitToCelcius, milesToKilometers } from "./utils";
 function App() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
+  const [iconName, setIconName] = useState("");
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=895284fb2d2c50a520ea537456963d9c`;
-
   const searchLocation = (event) => {
     if (event.key === "Enter") {
       axios.get(url).then((response) => {
         setData(response.data);
+        setIconName(response.data.weather[0].icon);
         console.log(response.data);
       });
       setLocation("");
@@ -39,6 +40,13 @@ function App() {
             {data.main ? (
               <h1>{fahrenheitToCelcius(data.main.temp.toFixed())}°C</h1>
             ) : null}
+          </div>
+          <div className="icon">
+            {iconName !== "" && (
+              <img
+                src={`https://openweathermap.org/img/wn/${iconName}@2x.png`}
+              />
+            )}
           </div>
           <div className="description">
             {data.weather ? <p>{data.weather[0].main}</p> : null}
@@ -73,5 +81,42 @@ function App() {
     </div>
   );
 }
+
+/*
+const icons =[parly, sunny, rain, cloudy, snowy, stormy];
+const getIcon = (weather) => {
+  switch(weather){
+    case "Parly Cloud"
+     return icons[0]
+     break;
+    case "Sunny"
+     return icons[1]
+     break;
+    case "Clear"
+     return icons[1]
+     break;
+    case "Light rain"
+     return icons[2]
+     break;
+    case "Moderate rain"
+     return icons[2]
+     break;
+    case "Heavy Rain"
+     return icons[2]
+     break;
+    case "Overcast"
+     return icon[3]
+     break;
+    case "Snow"
+     return icon[4]
+     break;
+    case "Moderate or heavy rain wiht tunder"
+     return icons[5]
+     break;
+    default:
+       return
+  }
+}
+  */
 
 export default App;
