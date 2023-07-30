@@ -1,24 +1,8 @@
-<h1 align="center"> Habits </h1>
-
-<p align="center">
- <br/>
-</p>
-
-<p align="center">
-  <a href="#-tecnologias">Tecnology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projet</a>
-
-</p>
-
-
-
-<br>
-
-
+<h1 align="center"> Meteo  APP</h1>
 
 ## 🚀 Tecnology
 
-In this project i used this 
+In this project i used this
 
 - HTML e CSS
 - JavaScript
@@ -29,6 +13,6 @@ In this project i used this
 
 Meteo app React
 
-- [Visite o projeto online](https://usedtron.github.io/nlw-setup)
+- [Visit my project](https://usedtron.github.io/weather-app/)
 
 Made by Nicolai Cernean

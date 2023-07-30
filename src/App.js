@@ -81,42 +81,4 @@ function App() {
     </div>
   );
 }
-
-/*
-const icons =[parly, sunny, rain, cloudy, snowy, stormy];
-const getIcon = (weather) => {
-  switch(weather){
-    case "Parly Cloud"
-     return icons[0]
-     break;
-    case "Sunny"
-     return icons[1]
-     break;
-    case "Clear"
-     return icons[1]
-     break;
-    case "Light rain"
-     return icons[2]
-     break;
-    case "Moderate rain"
-     return icons[2]
-     break;
-    case "Heavy Rain"
-     return icons[2]
-     break;
-    case "Overcast"
-     return icon[3]
-     break;
-    case "Snow"
-     return icon[4]
-     break;
-    case "Moderate or heavy rain wiht tunder"
-     return icons[5]
-     break;
-    default:
-       return
-  }
-}
-  */
-
 export default App;
