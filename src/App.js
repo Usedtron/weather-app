@@ -42,7 +42,6 @@ function App() {
             ) : null}
           </div>
           <div className="icon">
-            <p>Hello world</p>
             {iconName !== "" && (
               <img
                 src={`https://openweathermap.org/img/wn/${iconName}@2x.png`}
@@ -63,7 +62,6 @@ function App() {
                 </p>
               ) : null}
               <p>Feels Like</p>
-              <p>ola</p>
             </div>
             <div className="humidity">
               {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
